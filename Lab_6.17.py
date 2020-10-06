@@ -11,6 +11,6 @@ password_key = {"i": "1",
 for element in password:
     for key in password_key:
         if key == element:
-            password = password.replace(element, password_key[key]) + 'q*s'
+            password = password.replace(element, password_key[key])
 
-print(password)
+print(password + 'q*s')
