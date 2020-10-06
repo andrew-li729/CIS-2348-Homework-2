@@ -2,6 +2,7 @@
 # 1824794
 
 def exact_change(user_total):
+    user_total = user_total/100
     num_dollars = user_total // 1
     num_cents = (user_total - num_dollars)
 
@@ -18,7 +19,7 @@ def exact_change(user_total):
     return num_dollars, num_quarters, num_dimes, num_nickels, num_pennies
 
 
-total = float(input())/100
+total = float(input())
 if total <= 0:
     print("no change")
 else:
@@ -49,3 +50,4 @@ else:
     elif numnickels == 1:
         print("{:.0f} penny".format(numpennies))
 
+print(exact_change(300))
