@@ -4,7 +4,7 @@ months_list = ["January", "February", "March", "April", "May", "June", "July",
 
 # PART A
 date_input = []
-while True:
+while True:  # gathers user input until user inputs "-1"
     s = input("Enter date:")
     if s == '-1':
         break
@@ -20,7 +20,8 @@ for date in date_input:
             print(replace_month)
             print("")
 
-# PART B
+# PART B & C
+parsedDates = open("parsedDates.txt", "w")  # creates file for part C
 for line in file:
     for month in months_list:
         if line.find(month) != -1:
@@ -29,3 +30,4 @@ for line in file:
             add_slash = remove_comma.replace(" ", "/")  # replaces spaces with "/"
             replace_month = add_slash.replace(month, str(month_num))  # replaces month name with month number
             print(replace_month)
+            parsedDates.write(replace_month)  # writes result to new file named parsedDates.txt
