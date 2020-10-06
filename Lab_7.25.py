@@ -50,4 +50,3 @@ else:
     elif numnickels == 1:
         print("{:.0f} penny".format(numpennies))
 
-print(exact_change(300))
