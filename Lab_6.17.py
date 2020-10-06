@@ -2,7 +2,7 @@
 # 1824794
 
 password = input()
-password_key = {"i": "1",
+password_key = {"i": "!",
                 "a": "@",
                 "m": "M",
                 "B": "8",
