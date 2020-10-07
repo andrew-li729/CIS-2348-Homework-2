@@ -19,34 +19,34 @@ def exact_change(user_total):
     return num_dollars, num_quarters, num_dimes, num_nickels, num_pennies
 
 
-total = float(input())
-if total <= 0:
-    print("no change")
-else:
-    # print(exact_change(total))
-    numdollars, numquarters, numdimes, numnickels, numpennies = exact_change(total)
-    if numdollars != 0 and numdollars > 1:
-        print("{:.0f} dollars".format(numdollars))
-    elif numdollars == 1:
-        print("{:.0f} dollar".format(numdollars))
+if __name__ == '__main__':
+    total = float(input())
+    if total <= 0:
+        print("no change")
+    else:
+        # print(exact_change(total))
+        numdollars, numquarters, numdimes, numnickels, numpennies = exact_change(total)
+        if numdollars != 0 and numdollars > 1:
+            print("{:.0f} dollars".format(numdollars))
+        elif numdollars == 1:
+            print("{:.0f} dollar".format(numdollars))
 
-    if numquarters != 0 and numquarters > 1:
-        print("{:.0f} quarters".format(numquarters))
-    elif numquarters == 1:
-        print("{:.0f} quarter".format(numquarters))
+        if numquarters != 0 and numquarters > 1:
+            print("{:.0f} quarters".format(numquarters))
+        elif numquarters == 1:
+            print("{:.0f} quarter".format(numquarters))
 
-    if numdimes != 0 and numdimes > 1:
-        print("{:.0f} dimes".format(numdimes))
-    elif numdimes == 1:
-        print("{:.0f} dime".format(numdimes))
+        if numdimes != 0 and numdimes > 1:
+            print("{:.0f} dimes".format(numdimes))
+        elif numdimes == 1:
+            print("{:.0f} dime".format(numdimes))
 
-    if numnickels != 0 and numnickels > 1:
-        print("{:.0f} nickels".format(numnickels))
-    elif numnickels == 1:
-        print("{:.0f} nickel".format(numnickels))
+        if numnickels != 0 and numnickels > 1:
+            print("{:.0f} nickels".format(numnickels))
+        elif numnickels == 1:
+            print("{:.0f} nickel".format(numnickels))
 
-    if numpennies != 0 and numpennies > 1:
-        print("{:.0f} pennies".format(numpennies))
-    elif numnickels == 1:
-        print("{:.0f} penny".format(numpennies))
-
+        if numpennies != 0 and numpennies > 1:
+            print("{:.0f} pennies".format(numpennies))
+        elif numnickels == 1:
+            print("{:.0f} penny".format(numpennies))
