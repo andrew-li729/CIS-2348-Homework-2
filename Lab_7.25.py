@@ -2,30 +2,27 @@
 # 1824794
 
 def exact_change(user_total):
-    user_total = user_total/100
-    num_dollars = user_total // 1
-    num_cents = (user_total - num_dollars)
+    total = user_total
+    num_dollars = total//100
+    total = total - num_dollars * 100
+    # print(total)
+    num_quarters = total // 25
+    total = total - num_quarters * 25
+    num_dimes = total // 10
+    total = total - num_dimes * 10
+    num_nickels = total // 5
+    num_pennies = total - num_nickels * 5
 
-    num_quarters = num_cents // 0.25
-    num_cents = num_cents - num_quarters*.25
-
-    num_dimes = num_cents // 0.10
-    num_cents = num_cents - num_dimes*.10
-
-    num_nickels = num_cents // 0.05
-    num_cents = num_cents - num_nickels*0.05
-
-    num_pennies = num_cents // 0.01
     return num_dollars, num_quarters, num_dimes, num_nickels, num_pennies
 
 
 if __name__ == '__main__':
-    total = float(input())
-    if total <= 0:
+    user_val = float(input())
+    if user_val <= 0:
         print("no change")
     else:
-        # print(exact_change(total))
-        numdollars, numquarters, numdimes, numnickels, numpennies = exact_change(total)
+        # print(exact_change(user_val))
+        numdollars, numquarters, numdimes, numnickels, numpennies = exact_change(user_val)
         if numdollars != 0 and numdollars > 1:
             print("{:.0f} dollars".format(numdollars))
         elif numdollars == 1:
@@ -48,5 +45,5 @@ if __name__ == '__main__':
 
         if numpennies != 0 and numpennies > 1:
             print("{:.0f} pennies".format(numpennies))
-        elif numnickels == 1:
+        elif numpennies == 1:
             print("{:.0f} penny".format(numpennies))
