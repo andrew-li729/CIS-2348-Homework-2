@@ -2,7 +2,8 @@
 # 1824794
 import csv
 word_list = []
-with open("input1.csv", 'r') as file:  # reads csv file and creates words list from row
+filename = input()
+with open(filename, 'r') as file:  # reads csv file and creates words list from row
     reader = csv.reader(file)
     for row in reader:
         words = row
